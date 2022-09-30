@@ -8,14 +8,13 @@ class Program
         while (true)
         {
             Console.WriteLine("\nQuan ly sinh vien: ");
-            Console.WriteLine("**********************Bang chon************************");
-            Console.WriteLine("**  1. Them sinh vien.                               **");
-            Console.WriteLine("**  2. Hien thi sinh vien.                           **");
-            Console.WriteLine("**  3. Xoa sinh vien theo Msv.                       **");
-            Console.WriteLine("**  4. Tim kiem sinh vien theo Msv                   **");
-            Console.WriteLine("**  5. Cap nhat sinh vien theo Msv.                  **");
-            Console.WriteLine("**  6. Thoat                                         **");
-            Console.WriteLine("*******************************************************");
+            Console.WriteLine(" 1. Them sinh vien.");
+            Console.WriteLine(" 2. Hien thi sinh vien.");
+            Console.WriteLine(" 3. Xoa sinh vien theo Msv.");
+            Console.WriteLine(" 4. Tim kiem sinh vien theo Msv.");
+            Console.WriteLine(" 5. Cap nhat sinh vien theo Msv.");
+            Console.WriteLine(" 6. Tong so sinh vien.");
+            Console.WriteLine(" 7. Thoat.");
             Console.Write("Nhap tuy chon: ");
             int key = Convert.ToInt32(Console.ReadLine());
             switch (key)
@@ -38,6 +37,9 @@ class Program
                 case 5:
                     int Id = Convert.ToInt32(Console.ReadLine());
                     quanlysinhvien.UpdateSv(Id);
+                    break;
+                case 6:
+                    Console.WriteLine(quanlysinhvien.NumberofListsv());
                     break;
                 default:
                     Console.WriteLine("Khong co chon thoa man yeu cau !!!!");
