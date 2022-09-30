@@ -5,7 +5,8 @@ class Program
     public static void Main(string[] args)
     {
         QuanLySinhVien quanlysinhvien = new QuanLySinhVien();
-        while (true)
+        bool focus = true;
+        while (focus)
         {
             Console.WriteLine("\nQuan ly sinh vien: ");
             Console.WriteLine(" 1. Them sinh vien.");
@@ -40,6 +41,9 @@ class Program
                     break;
                 case 6:
                     Console.WriteLine(quanlysinhvien.NumberofListsv());
+                    break;
+                case 7:
+                    focus = false;
                     break;
                 default:
                     Console.WriteLine("Khong co chon thoa man yeu cau !!!!");
